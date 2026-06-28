@@ -12,10 +12,10 @@ const transporter = nodemailer.createTransport({
 
 const sendEmail = async (lead) => {
   const openPixel =
-    `http://localhost:5000/api/leads/open/${lead.trackingId}`;
+    `https://lead-management-99w8.onrender.com/api/leads/open/${lead.trackingId}`;
 
   const clickLink =
-    `http://localhost:5000/api/leads/click/${lead.trackingId}`;
+    `https://lead-management-99w8.onrender.com/api/leads/click/${lead.trackingId}`;
 
   await transporter.sendMail({
     from: process.env.EMAIL,
